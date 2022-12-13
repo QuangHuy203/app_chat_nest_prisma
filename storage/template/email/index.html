@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        @media only screen and (max-width: 620px) {
+            .wrap {
+                padding: 0 10px !important;
+            }
+
+            .wrap>.top,
+            .wrap>.bottom {
+                padding: 5px 0 !important;
+            }
+
+            .wrap>.inner {
+                padding: 10px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap" style="background-color: #f8f8f8; padding: 0 40px">
+        <div class="top" style="text-align: center; padding: 20px 0">
+            <img src="cid:logo@reeme.com.vn" width="95" style="display: inline-block; width: 95px" />
+        </div>
+        <div class="inner" style="background-color: #fff; border-radius: 8px; font-size: 16px; padding: 50px;">
+            <div style="font-size: 20px">
+                Hi<strong>{{ name }}</strong>,
+            </div>
+            {{ body }}
+            Best regards,<br />
+            PowerHub System team
+        </div>
+        <div class="bottom" style="text-align: center; padding: 20px 0; font-size: 12px;">
+            <a href="{{ loginLink }}" style="font-weight: bold; text-decoration: none; font-style: italic; color: #111">
+                Login
+            </a>
+            <div style="font-style: italic; font-weight: bold;">@ALL rights reserved. PowerHub</div>
+            <div>Please do not reply this notification</div>
+        </div>
+    </div>
+</body>
+
+</html>

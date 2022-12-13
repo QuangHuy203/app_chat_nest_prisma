@@ -1,0 +1,62 @@
+{
+  "AREA": {
+    "GET_LIST_SUCCESS": "Tìm thấy danh sách khu vực",
+    "GET_SUCCESS": "Tìm thấy khu vực",
+    "ADD_SUCCESS": "Thêm khu vực thành công",
+    "UPDATE_SUCCESS": "Cập nhật khu vực thành công",
+    "DELETE_SUCCESS": "Xoá khu vực thành công",
+    "DELETED": "Khu vực đã bị xoá",
+    "NOT_FOUND": "Không tìm thấy khu vực"
+  },
+  "BUSINESS_MODEL": {
+    "GET_LIST_SUCCESS": "Tìm thấy danh sách mô hình kinh doanh",
+    "GET_SUCCESS": "Tìm thấy mô hình kinh doanh",
+    "ADD_SUCCESS": "Thêm mô hình kinh doanh thành công",
+    "UPDATE_SUCCESS": "Cập nhật mô hình kinh doanh thành công",
+    "DELETE_SUCCESS": "Xoá mô hình kinh doanh thành công",
+    "NOT_FOUND": "Không tìm thấy mô hình kinh doanh",
+    "DELETED": "Mô hình kinh doanh đã bị xoá"
+  },
+  "CONTACT": {
+    "GET_LIST_SUCCESS": "Tìm thấy danh sách thông tin liên lạc",
+    "GET_SUCCESS": "Tìm thấy thông tin liên lạc",
+    "ADD_SUCCESS": "Thêm thông tin liên lạc thành công",
+    "UPDATE_SUCCESS": "Cập nhật thông tin liên lạc thành công",
+    "DELETE_SUCCESS": "Xoá thông tin liên lạc thành công",
+    "NOT_FOUND": "Không tìm thấy thông tin liên lạc"
+  },
+  "MONITOR": {
+    "GET_LIST_SUCCESS": "Tìm thấy danh sách màn hình theo dõi",
+    "GET_SUCCESS": "Tìm thấy màn hình theo dõi",
+    "ADD_SUCCESS": "Thêm màn hình theo dõi thành công",
+    "UPDATE_SUCCESS": "Cập nhật màn hình theo dõi thành công",
+    "DELETE_SUCCESS": "Xoá màn hình theo dõi thành công",
+    "DELETED": "Màn hình theo dõi đã xoá",
+    "NOT_FOUND": "Không tìm thấy màn hình theo dõi"
+  },
+  "PROJECT": {
+    "GET_LIST_SUCCESS": "Tìm thấy danh sách dự án",
+    "GET_ALL_SUCCESS": "Tìm thấy danh sách khách hàng của tất cả dự án",
+    "GET_SUCCESS": "Tìm thấy dự án",
+    "ADD_SUCCESS": "Thêm dự án thành công",
+    "UPDATE_SUCCESS": "Cập nhật dự án thành công",
+    "DELETE_SUCCESS": "Xoá dự án thành công",
+    "DELETED": "Dự án đã xoá",
+    "EXISTED": "Dự án đang tồn tại",
+    "LEAST_ONE_ERROR": "Cần phải có ít nhật một người dùng mới có thể thêm dự án",
+    "ID_MUST_NUMBER": "Id của project phải là số",
+    "NOT_FOUND": "Không tìm thấy dự án"
+  },
+  "TRANSFORMER": {
+    "GET_LIST_SUCCESS": "Tìm thấy danh sách máy biến áp",
+    "GET_SUCCESS": "Tìm thấy máy biến áp",
+    "ADD_SUCCESS": "Thêm máy biến áp thành công",
+    "UPDATE_SUCCESS": "Cập nhật máy biến áp thành công",
+    "DELETE_SUCCESS": "Xoá máy biến áp thành công",
+    "NOT_EXISTED": "Máy biến áp không tồn tại",
+    "EXISTED": "Máy biến áp đang tồn tại",
+    "CAPACITY_MUST_NUMBER": "Trường transformerCapacity phải là số",
+    "MANUFACTURER_MUST_STRING": "Trường transformerManufacturer phải là chuỗi",
+    "NOT_FOUND": "Không tìm thấy máy biến áp"
+  }
+}

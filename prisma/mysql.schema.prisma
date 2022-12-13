@@ -1,0 +1,274 @@
+generator client {
+  provider        = "prisma-client-js"
+  output          = "../node_modules/@prisma/mysql"
+  previewFeatures = ["interactiveTransactions"]
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("MYSQL_DATABASE_URL")
+}
+
+model User {
+  id          Int       @id @default(autoincrement())
+  created_at  DateTime  @default(now()) @db.DateTime(6)
+  updated_at  DateTime  @default(now()) @db.DateTime(6)
+  deletedDate DateTime?
+
+  firstName String?
+  lastName  String?
+  email     String?
+
+  // required field
+  username String @unique
+  password String
+
+  conversationCreator   Conversation[] @relation("conversationCreator")
+  conversationRecipient Conversation[] @relation("conversationRecipient")
+  messageAuthor         Message[]
+
+  // foreign keys
+  profileId  Int?
+  peerId     Int?
+  presenceId Int? @unique
+
+  // relations
+  presence UserPresence? @relation(fields: [presenceId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  GroupMessages   GroupMessages[]
+  UsersGroups     UsersGroups[]
+  Peer            Peer[]
+  sender          Friend?         @relation(name: "sender")
+  receiver        Friend?         @relation(name: "receiver")
+  groups_creator  Groups[]        @relation("group_creator")
+  groups_owner    Groups[]
+  senderRequest   FriendRequest?  @relation(name: "sender")
+  receiverRequest FriendRequest?  @relation(name: "receiver")
+  UserProfile     UserProfile?
+  Tokens          Tokens?
+
+  @@map("user")
+}
+
+model GroupMessageAttachments {
+  key            String         @id @db.Char(36)
+  messageId      Int?
+  group_messages GroupMessages? @relation(fields: [messageId], references: [id], onDelete: Cascade, onUpdate: NoAction, map: "FK_e3e4b147713098bbc5a3948c24b")
+
+  @@index([messageId], map: "FK_e3e4b147713098bbc5a3948c24b")
+  @@map("group_message_attachments")
+}
+
+model GroupMessages {
+  id                        Int                       @id @default(autoincrement())
+  content                   String?                   @db.Text
+  created_at                DateTime                  @default(now()) @db.DateTime(6)
+  authorId                  Int?
+  groupId                   Int?
+  group_message_attachments GroupMessageAttachments[]
+  groups                    Groups?                   @relation("group_messages_groupIdTogroups", fields: [groupId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FK_8f9e67acada60b6ae7096c4f15f")
+  users                     User?                     @relation(fields: [authorId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FK_a2d00b52e4e18a3686d68a155c0")
+  groups_last_message       Groups?                   @relation("groups_last_message_sentTogroup_messages")
+
+  @@index([groupId], map: "FK_8f9e67acada60b6ae7096c4f15f")
+  @@index([authorId], map: "FK_a2d00b52e4e18a3686d68a155c0")
+  @@map("group_messages")
+}
+
+model Groups {
+  id         Int      @id @default(autoincrement())
+  title      String?  @db.VarChar(255)
+  created_at DateTime @default(now()) @db.DateTime(6)
+  updated_at DateTime @default(now()) @db.DateTime(6)
+  avatar     String?  @db.VarChar(255)
+  creatorId  Int?
+  ownerId    Int?
+
+  creator              User?           @relation("group_creator", fields: [creatorId], references: [id])
+  owner                User?           @relation(fields: [ownerId], references: [id])
+  last_message_sent_id Int?            @unique(map: "REL_4147c690073a1c217af1169841")
+  group_messages       GroupMessages[] @relation("group_messages_groupIdTogroups")
+  last_message_sent    GroupMessages?  @relation("groups_last_message_sentTogroup_messages", fields: [last_message_sent_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FK_4147c690073a1c217af1169841b")
+  users_groups         UsersGroups[]
+
+  @@map("groups")
+}
+
+model UsersGroups {
+  groupsId Int
+  usersId  Int
+  users    User   @relation(fields: [usersId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "FK_0f3881cfe1ef94b0e435d1d72f9")
+  groups   Groups @relation(fields: [groupsId], references: [id], onDelete: Cascade, map: "FK_6320d5cbd6f7702b2e78d38d6b8")
+
+  @@id([groupsId, usersId])
+  @@index([usersId], map: "IDX_0f3881cfe1ef94b0e435d1d72f")
+  @@index([groupsId], map: "IDX_6320d5cbd6f7702b2e78d38d6b")
+  @@map("users_groups")
+}
+
+model UserPresence {
+  id          Int       @id @default(autoincrement())
+  createdDate DateTime  @default(now())
+  createdBy   Int?
+  updatedDate DateTime?
+  updatedBy   Int?
+  deletedDate DateTime?
+
+  statusMessage String?
+  showOffline   Boolean @default(false)
+  user          User?
+
+  @@map("user_presences")
+}
+
+model Peer {
+  id         Int      @id @default(autoincrement())
+  created_at DateTime @default(now()) @db.DateTime(6)
+  updated_at DateTime @default(now()) @db.DateTime(6)
+
+  userId Int?
+  user   User? @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+
+  @@map("peers")
+}
+
+model Friend {
+  id         Int      @id @default(autoincrement())
+  sender     User     @relation(name: "sender", fields: [senderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  senderId   Int      @unique
+  receiver   User     @relation(name: "receiver", fields: [receiverId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  receiverId Int      @unique
+  createAt   DateTime @default(now())
+
+  @@map("friend")
+}
+
+model Conversation {
+  id          Int       @id @default(autoincrement())
+  createdDate DateTime  @default(now())
+  createdBy   Int?
+  updatedDate DateTime?
+  updatedBy   Int?
+  deletedDate DateTime?
+
+  creator           Int
+  recipient         Int
+  messages          Message[]              @relation("messages")
+  lastMessageSent   Conversation_Message[]
+  lastMessageSentAt DateTime?
+
+  userCreator   User @relation("conversationCreator", fields: [creator], references: [id])
+  userRecipient User @relation("conversationRecipient", fields: [recipient], references: [id])
+
+  @@map("conversation")
+}
+
+model Conversation_Message {
+  id          Int       @id @default(autoincrement())
+  createdDate DateTime  @default(now())
+  createdBy   Int?
+  updatedDate DateTime?
+  updatedBy   Int?
+  deletedDate DateTime?
+
+  conversationId Int
+  messageId      Int
+  conversation   Conversation @relation(fields: [conversationId], references: [id], onDelete: Cascade)
+  message        Message      @relation(fields: [messageId], references: [id], onDelete: Cascade)
+
+  @@unique([conversationId, messageId])
+  @@map("conversation_message")
+}
+
+model Message {
+  id          Int       @id @default(autoincrement())
+  createdDate DateTime  @default(now())
+  createdBy   Int?
+  updatedDate DateTime?
+  updatedBy   Int?
+  deletedDate DateTime?
+
+  content         String
+  authorId        Int
+  conversationId  Int
+  lastMessageSent Conversation_Message[]
+  attachments     MessageAttachment[]
+
+  user         User         @relation(fields: [authorId], references: [id])
+  conversation Conversation @relation("messages", fields: [conversationId], references: [id])
+
+  @@map("message")
+}
+
+model MessageAttachment {
+  id          Int       @id @default(autoincrement())
+  createdDate DateTime  @default(now())
+  createdBy   Int?
+  updatedDate DateTime?
+  updatedBy   Int?
+  deletedDate DateTime?
+
+  messageId Int
+  files     FileUpload[]
+  message   Message      @relation(fields: [messageId], references: [id])
+
+  @@map("messageAttachment")
+}
+
+model FileUpload {
+  id          Int       @id @default(autoincrement())
+  createdDate DateTime  @default(now())
+  createdBy   Int
+  updatedDate DateTime?
+  updatedBy   Int?
+  deletedDate DateTime?
+
+  fileName            String @db.VarChar(255)
+  baseUrl             String @db.VarChar(255)
+  messageAttachmentId Int?
+
+  messageAttachment MessageAttachment? @relation(fields: [messageAttachmentId], references: [id])
+
+  @@map("fileUpload")
+}
+
+model FriendRequest {
+  id         Int       @id @default(autoincrement())
+  sender     User      @relation(name: "sender", fields: [senderId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  senderId   Int       @unique
+  receiver   User      @relation(name: "receiver", fields: [receiverId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+  receiverId Int       @unique
+  createAt   DateTime? @default(now())
+  status     String?
+
+  @@map("friend_request")
+}
+
+model UserProfile {
+  id          Int       @id @default(autoincrement())
+  createdDate DateTime  @default(now())
+  createdBy   Int?
+  updatedDate DateTime?
+  updatedBy   Int?
+  deletedDate DateTime?
+  about       String?
+  avatar      String?
+  banner      String?
+  userId      Int?      @unique
+  user        User?     @relation(fields: [userId], references: [id], onDelete: Cascade, onUpdate: Cascade)
+}
+
+model Tokens {
+  id          Int       @id @default(autoincrement())
+  createdDate DateTime  @default(now())
+  createdBy   Int?
+  updatedDate DateTime?
+  updatedBy   Int?
+  deletedDate DateTime?
+
+  refreshTokenSha1 String
+  userId           Int    @unique
+  user             User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("tokens")
+}

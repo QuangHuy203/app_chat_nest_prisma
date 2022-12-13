@@ -1,0 +1,823 @@
+[
+  {
+    "_id": "f9489838-109e-4cf7-92d6-78a66ee2af0a",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/auth/signin",
+    "url": "{{host}}/auth/signin",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-10-05T07:56:36.677Z",
+    "modified": "2022-11-08T14:28:03.284Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"localhost@gmail.com\",\n  \"password\": \"123\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data.accessToken",
+        "action": "setto",
+        "value": "{{accessToken}}"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.data.refreshToken",
+        "action": "setto",
+        "value": "{{refreshToken}}"
+      }
+    ]
+  },
+  {
+    "_id": "64a72c70-2ae4-4762-b572-e5122dcc36eb",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/me",
+    "url": "{{host}}/users/me",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-06T04:04:18.589Z",
+    "modified": "2022-10-20T04:31:57.665Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "6981a698-9d07-4b43-ab50-7071f1d8c8d8",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/orders",
+    "url": "{{host}}/orders",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-14T08:12:33.394Z",
+    "modified": "2022-10-14T08:20:39.437Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "303cd055-8c22-4f8f-b7b4-52b78cd09453",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/orders/42",
+    "url": "{{host}}/orders/42",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-14T08:13:09.277Z",
+    "modified": "2022-10-14T08:13:09.284Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "0e1853a6-5288-4db9-9c68-788335aa50bf",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/order",
+    "url": "{{host}}/order",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-14T08:20:42.659Z",
+    "modified": "2022-10-14T08:20:42.668Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "0a32567e-baa0-4c29-b858-21d70d481285",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}",
+    "url": "{{host}}/users",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-14T08:20:50.710Z",
+    "modified": "2022-10-20T09:25:27.849Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "6d80d8ec-1f4c-4095-b5e6-c7465bc333c3",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/auth/signup",
+    "url": "{{host}}/users",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-10-17T01:17:08.130Z",
+    "modified": "2022-11-08T14:27:59.753Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"localhost@gmail.com\",\n  \"firstName\": \"Nguyễn\",\n  \"lastName\": \"Văn A\",\n  \"password\": \"123\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "033b608a-adbc-4fe1-b255-84dcec1e62f3",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/greeting-async",
+    "url": "{{host}}/users/greeting-async",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-17T12:29:55.592Z",
+    "modified": "2022-10-17T18:31:57.331Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"test@gmail.com\",\n  \"password\": \"123\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "411c02ed-2195-4ac1-b26e-88252120cce5",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/auth/me",
+    "url": "{{host}}/auth/me",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-18T08:58:44.328Z",
+    "modified": "2022-10-20T06:36:49.581Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "10b3386e-3eaf-4287-ac70-3891c23057ae",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users",
+    "url": "{{host}}/users",
+    "method": "PATCH",
+    "sortNum": 0,
+    "created": "2022-10-19T15:46:40.864Z",
+    "modified": "2022-10-19T16:57:06.918Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"nexlesoft@gmail.com\",\n  \"firstName\": \"Nguyễn\",\n  \"lastName\": \"Thành Công\",\n  \"hash\": \"456\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "6c074f91-26da-416b-a472-16b8f74d55a3",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/books",
+    "url": "{{host}}/books",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-19T17:38:01.780Z",
+    "modified": "2022-10-24T16:06:16.655Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "37b17c8c-ef20-4dba-b3a5-1089161c121d",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/auth/authentication",
+    "url": "{{host}}/auth/authentication",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T06:37:17.620Z",
+    "modified": "2022-11-01T04:47:40.149Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "3718f10d-bab5-41c7-a16e-b916d4b6be95",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/1",
+    "url": "{{host}}/users/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T07:10:46.128Z",
+    "modified": "2022-10-20T07:19:56.784Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "83477f90-9b14-479c-b876-e1543cf3dd9e",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/2",
+    "url": "{{host}}/users/2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T07:17:00.718Z",
+    "modified": "2022-10-20T07:17:00.728Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "9daced8c-c0de-4be5-b26a-a8faa6343083",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/3",
+    "url": "{{host}}/users/3",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T07:17:03.852Z",
+    "modified": "2022-10-20T07:17:04.929Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "d61dadab-d8ba-4a59-b9f7-67f390e8cb2a",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/12",
+    "url": "{{host}}/users/12",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T07:20:08.312Z",
+    "modified": "2022-10-20T07:20:14.956Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "ae860c32-f8f7-46f5-97db-5e284f886d11",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/123",
+    "url": "{{host}}/users/123",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T07:20:17.894Z",
+    "modified": "2022-10-20T07:20:22.122Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "37cdd95b-4eb7-4ae0-b10a-5625038b74fc",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/",
+    "url": "{{host}}/users/",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T07:20:28.899Z",
+    "modified": "2022-10-20T07:20:28.917Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "03436177-24f2-4836-a407-57abdfb4792e",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/6",
+    "url": "{{host}}/users/6",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T07:20:37.979Z",
+    "modified": "2022-10-20T07:54:25.010Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "7f6b2b42-a007-4dc3-8f1a-3fe1ba3a7c83",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/61",
+    "url": "{{host}}/users/61",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T07:23:03.386Z",
+    "modified": "2022-10-20T07:23:11.952Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "8ead6fd2-a305-4412-b488-12fb4ebc0ab1",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/1",
+    "url": "{{host}}/users/1",
+    "method": "PATCH",
+    "sortNum": 0,
+    "created": "2022-10-20T07:52:43.623Z",
+    "modified": "2022-10-20T08:33:42.530Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"nexlesoft@gmail.com\",\n  \"firstName\": \"Nguyễn\",\n  \"lastName\": \"Thành Công 123123123\",\n  \"hash\": \"456\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "a50a14c2-e2d4-4700-b724-5d9bd295487b",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/2",
+    "url": "{{host}}/users/2",
+    "method": "PATCH",
+    "sortNum": 0,
+    "created": "2022-10-20T08:03:01.594Z",
+    "modified": "2022-10-20T08:03:01.625Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"nexlesoft@gmail.com\",\n  \"firstName\": \"Nguyễn\",\n  \"lastName\": \"Thành Công 123123123\",\n  \"hash\": \"456\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "d837408e-e6c9-4244-87c1-27117ce5d71a",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/11",
+    "url": "{{host}}/users/11",
+    "method": "PATCH",
+    "sortNum": 0,
+    "created": "2022-10-20T08:03:38.464Z",
+    "modified": "2022-10-20T08:32:18.261Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"nexlesoft@gmail.com\",\n  \"firstName\": \"Nguyễn\",\n  \"lastName\": \"Thành Công 123123123\",\n  \"hash\": \"456\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "b36dc46c-a541-4334-8237-9b70200e10d4",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/3",
+    "url": "{{host}}/users/3",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-10-20T08:34:44.521Z",
+    "modified": "2022-10-20T08:34:52.248Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "19c6915e-a01f-4390-a482-da4937d2426e",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/users/6",
+    "url": "{{host}}/users/6",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-10-20T08:34:56.596Z",
+    "modified": "2022-10-20T08:36:18.982Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "11b07f58-64db-47e8-b345-4b1b58b2a633",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/books",
+    "url": "{{host}}/books",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-10-20T09:19:25.432Z",
+    "modified": "2022-10-24T15:55:41.954Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"PMI BOOK\",\n  \"description\": \"Quản lý dự án version 6\",\n  \"price\": 632000\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "9dcc8a68-e907-4245-826a-7af8026083c2",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/books/1",
+    "url": "{{host}}/books/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T09:27:51.207Z",
+    "modified": "2022-10-20T10:03:07.279Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "4435904e-1aaa-4536-897f-2201968acec9",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/books/1",
+    "url": "{{host}}/books/1",
+    "method": "PATCH",
+    "sortNum": 0,
+    "created": "2022-10-20T10:03:02.940Z",
+    "modified": "2022-10-20T10:03:02.973Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"PMI BOOK\",\n  \"description\": \"Quản lý dự án version 7\",\n  \"price\": 450000\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "f450011d-e8a4-4752-ae53-1464ce326976",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/books/2",
+    "url": "{{host}}/books/2",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-10-20T10:03:23.711Z",
+    "modified": "2022-10-20T10:05:56.819Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "b6b71b0b-c31b-46ff-9322-04282f8634d2",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/books/2",
+    "url": "{{host}}/books/2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T10:03:36.892Z",
+    "modified": "2022-10-20T10:07:13.145Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "447b4056-2cb4-4950-b218-0d8b0d07153c",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/bookmarks",
+    "url": "{{host}}/bookmarks",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T11:17:38.829Z",
+    "modified": "2022-10-24T16:53:50.930Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "58e7a4c8-1247-4313-b9de-81cf3bb0d963",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/bookmarks/42",
+    "url": "{{host}}/bookmarks/42",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T15:23:49.972Z",
+    "modified": "2022-10-20T17:55:05.792Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "9cc7da45-2250-4672-b571-d7e59319ecf9",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/bookmarks",
+    "url": "{{host}}/bookmarks",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-10-20T15:24:12.953Z",
+    "modified": "2022-10-24T16:53:49.081Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"New bookmark\",\n  \"link\": \"url\",\n  \"description\": \"description\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "26943fc7-7a33-43d1-bf08-fb060f1ab006",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/bookmarks/2",
+    "url": "{{host}}/bookmarks/2",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T17:55:09.203Z",
+    "modified": "2022-10-20T17:55:09.226Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "b355f97b-496e-4bc7-a50e-a6704f29af76",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/bookmarks/1",
+    "url": "{{host}}/bookmarks/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T17:55:12.951Z",
+    "modified": "2022-10-20T17:55:13.005Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "69d03a80-7464-4640-951d-bb5f175099ed",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/bookmarks/63518b3875e32d7d6e9e5e56",
+    "url": "{{host}}/bookmarks/63518b3875e32d7d6e9e5e56",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T17:55:23.318Z",
+    "modified": "2022-10-20T18:00:44.724Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "d2eb82b5-5ff0-4317-97a9-2e2670d9f881",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/bookmarks/6351a19a98ab044869d4f401",
+    "url": "{{host}}/bookmarks/6351a19a98ab044869d4f401",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-10-20T19:29:36.592Z",
+    "modified": "2022-10-20T19:33:19.978Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "2d7c28d7-07d5-441d-986c-c4bf6557339c",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/bookmarks/6351a19a98ab044869d4f401",
+    "url": "{{host}}/bookmarks/6351a19a98ab044869d4f401",
+    "method": "PATCH",
+    "sortNum": 0,
+    "created": "2022-10-20T19:30:24.210Z",
+    "modified": "2022-10-20T19:32:16.337Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"Thức khuya dậy sớm\",\n  \"link\": \"url\",\n  \"description\": \"description\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "703e6dba-c7ea-48e1-bcdd-0bf366d17546",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/bookmarks/6351a19a98ab044869d4f401",
+    "url": "{{host}}/bookmarks/6351a19a98ab044869d4f401",
+    "method": "DELETE",
+    "sortNum": 0,
+    "created": "2022-10-20T19:32:30.915Z",
+    "modified": "2022-10-20T19:32:50.656Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "1abd8f11-d7e2-4cbf-8fba-35d9be83f9ab",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/customers",
+    "url": "{{host}}/customers",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-01T04:22:47.013Z",
+    "modified": "2022-11-02T08:40:08.236Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "2eeaf53d-c8a2-48d3-8eae-9b0845bd8a79",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/customers",
+    "url": "{{host}}/customers",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2022-11-01T04:23:00.161Z",
+    "modified": "2022-11-01T10:20:00.332Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"nexlesoft@gmail.com\",\n  \"fullName\": \"Công Ty TNHH Một Mình Tau\",\n  \"address\": \"123 Bình Thường\",\n  \"code\": \"VN456\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "9c50280a-1074-4f53-a5a3-20429ac90e34",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{host}}/customers/1",
+    "url": "{{host}}/customers/1",
+    "method": "GET",
+    "sortNum": 0,
+    "created": "2022-11-01T04:26:07.797Z",
+    "modified": "2022-11-01T04:26:07.853Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  }
+]

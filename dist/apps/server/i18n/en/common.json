@@ -1,0 +1,7 @@
+{
+  "UNAUTHORIZED": "Unauthorized",
+  "VERIFIED": "Verified",
+  "INCORRECT_CREDENTIALS": "Invalid username or password",
+  "INTERNAL_SERVER_ERROR": "Internal server error",
+  "CONSTRAINTS_NOT_FOUND": "Some constraints are not available"
+}

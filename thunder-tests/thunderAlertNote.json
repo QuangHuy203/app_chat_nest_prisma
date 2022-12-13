@@ -1,0 +1,109 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "alert_notes",
+    "dateExported": "2022-10-31T09:30:00.001Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "80024ae5-5e4e-49d8-abaf-9be52fbf123a",
+            "colId": "dafbb3ec-ddf8-4e85-b323-6b3e5d95aacc",
+            "containerId": "",
+            "name": "findById",
+            "url": "http://localhost:50000/alert-notes/1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2022-10-30T16:31:47.898Z",
+            "modified": "2022-10-30T17:27:21.005Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "39c800a4-be79-4c17-b078-84520e20be8e",
+            "colId": "dafbb3ec-ddf8-4e85-b323-6b3e5d95aacc",
+            "containerId": "",
+            "name": "deleteById",
+            "url": "http://localhost:50000/alert-notes/2",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2022-10-30T16:31:47.899Z",
+            "modified": "2022-10-31T09:29:44.257Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "734f6cae-18b3-4505-96b9-7663ef6fe95a",
+            "colId": "dafbb3ec-ddf8-4e85-b323-6b3e5d95aacc",
+            "containerId": "",
+            "name": "updateById",
+            "url": "http://localhost:50000/alert-notes/2",
+            "method": "PATCH",
+            "sortNum": 30000,
+            "created": "2022-10-30T16:31:47.900Z",
+            "modified": "2022-10-31T09:29:32.154Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Note 123\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "a22eabce-08b0-4691-bb9b-cd3b30812c14",
+            "colId": "dafbb3ec-ddf8-4e85-b323-6b3e5d95aacc",
+            "containerId": "",
+            "name": "getAll",
+            "url": "http://localhost:50000/alert-notes",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2022-10-30T16:31:47.902Z",
+            "modified": "2022-10-30T23:34:06.518Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "4c2863ae-c36a-45ca-be18-882e884eedfd",
+            "colId": "dafbb3ec-ddf8-4e85-b323-6b3e5d95aacc",
+            "containerId": "",
+            "name": "create",
+            "url": "http://localhost:50000/alert-notes",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2022-10-30T16:31:47.903Z",
+            "modified": "2022-10-31T09:27:49.044Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"Note 1\"\n}",
+                "form": []
+            },
+            "auth": {
+                "type": "bearer",
+                "bearer": "{{token}}"
+            },
+            "tests": []
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "INVERTER_TYPES": {
+        "GET_LIST_SUCCESS": "Get inverter_types successfully",
+        "GET_SUCCESS": "Get inverter_types successfully",
+        "ADD_SUCCESS": "Add inverter_types successfully",
+        "UPDATE_SUCCESS": "Update inverter_types successfully",
+        "DELETE_SUCCESS": "Delete inverter_types successfully",
+        "DELETED": "Inverter_types deleted",
+        "NOT_FOUND": "Inverter_types does not exist",
+        "USER_NOT_FOUND": "User data id not valid",
+        "INVALID_USER": "Credentials incorrect"
+    },
+    "INVERTERS": {
+        "GET_LIST_SUCCESS": "Get inverters successfully",
+        "GET_SUCCESS": "Get inverters successfully",
+        "ADD_SUCCESS": "Add inverters successfully",
+        "UPDATE_SUCCESS": "Update inverters successfully",
+        "DELETE_SUCCESS": "Delete inverters successfully",
+        "DELETED": "Inverters deleted",
+        "NOT_FOUND": "Inverters does not exist",
+        "USER_NOT_FOUND": "User data id not valid",
+        "INVALID_USER": "Credentials incorrect"
+    },
+    "METER_TYPES": {
+        "GET_LIST_SUCCESS": "Get meter_types successfully",
+        "GET_SUCCESS": "Get meter_types successfully",
+        "ADD_SUCCESS": "Add meter_types successfully",
+        "UPDATE_SUCCESS": "Update meter_types successfully",
+        "DELETE_SUCCESS": "Delete meter_types successfully",
+        "DELETED": "Meter_types deleted",
+        "NOT_FOUND": "Meter_types does not exist",
+        "USER_NOT_FOUND": "User data id not valid",
+        "INVALID_USER": "Credentials incorrect"
+    },
+    "METERS": {
+        "GET_LIST_SUCCESS": "Get meters successfully",
+        "GET_SUCCESS": "Get meters successfully",
+        "ADD_SUCCESS": "Add meters successfully",
+        "UPDATE_SUCCESS": "Update meters successfully",
+        "DELETE_SUCCESS": "Delete meters successfully",
+        "DELETED": "Meters deleted",
+        "NOT_FOUND": "Meters does not exist"
+    },
+    "PANEL_TYPES": {
+        "GET_LIST_SUCCESS": "Get panel_types successfully",
+        "GET_SUCCESS": "Get panel_types successfully",
+        "ADD_SUCCESS": "Add panel_types successfully",
+        "UPDATE_SUCCESS": "Update panel_types successfully",
+        "DELETE_SUCCESS": "Delete panel_types successfully",
+        "DELETED": "Panel_types deleted",
+        "NOT_FOUND": "Panel_types does not exist",
+        "USER_NOT_FOUND": "User data id not valid",
+        "INVALID_USER": "Credentials incorrect"
+    },
+    "PANELS": {
+        "GET_LIST_SUCCESS": "Get panels successfully",
+        "GET_SUCCESS": "Get panels successfully",
+        "ADD_SUCCESS": "Add panels successfully",
+        "UPDATE_SUCCESS": "Update panels successfully",
+        "DELETE_SUCCESS": "Delete panels successfully",
+        "DELETED": "Panels deleted",
+        "NOT_FOUND": "Panels does not exist",
+        "USER_NOT_FOUND": "User data id not valid",
+        "INVALID_USER": "Credentials incorrect"
+    },
+    "SENSORS": {
+        "GET_LIST_SUCCESS": "Get sensors successfully",
+        "GET_SUCCESS": "Get sensors successfully",
+        "ADD_SUCCESS": "Add sensors successfully",
+        "UPDATE_SUCCESS": "Update sensors successfully",
+        "DELETE_SUCCESS": "Delete sensors successfully",
+        "DELETED": "Sensors deleted",
+        "NOT_FOUND": "Sensors does not exist"
+    }
+}

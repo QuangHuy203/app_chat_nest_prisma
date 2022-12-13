@@ -1,0 +1,18 @@
+{
+  "ALERT_ITEMS": {
+    "GET_ITEMS": "Get all alert items successfully",
+    "ITEM_NOT_EXIST": "Alert item does not exist",
+    "GET_ITEM": "Get alert item by id successfully",
+    "ADD_ITEM": "Add alert item successfully",
+    "UPDATE_SUCCESS": "Update alert item successfully",
+    "DELETE_SUCCESS": "Delete alert item successfully"
+  },
+  "ALERT_PROJECTS": {
+    "GET_ITEMS_SUCCESS": "Get all alerts successfully",
+    "ALERT_NOT_EXIST": "Project alert does not exist",
+    "GET_SUCCESS": "Get project alert by id successfully",
+    "ADD_SUCCESS": "Add project alert successfully",
+    "UPDATE_SUCCESS": "Update project alert successfully",
+    "DELETE_SUCCESS": "Delete project alert successfully"
+  }
+}

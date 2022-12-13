@@ -1,0 +1,65 @@
+{
+  "AUTH": {
+    "SIGN_OUT_SUCCESS": "Đăng xuất thành công",
+    "GET_SUCCESS_TOKEN_SUCCESS": "Cập nhật mã truy cập thành công",
+    "RESET_PASSWORD_LINK_SENT": "Đường dẫn tới trang thay đổi mật khẩu đã được gửi qua email của bạn",
+
+    "REFRESH_TOKEN_EXPIRED": "Mã truy cập hết hạn hoặc không tồn tại"
+  },
+  "USER": {
+    "SIGN_UP_SUCCESS": "Đăng ký thành công, vui lòng kích hoạt tài khoản của bạn.",
+    "GET_USER_LIST_SUCCESS": "Tìm thấy danh sách người dùng",
+    "GET_USER_SUCCESS": "Tìm thấy người dùng",
+    "UPDATE_SUCCESS": "Cập nhật thông tin người dùng thành công",
+    "UPDATE_PASSWORD_SUCCESS": "Thay đổi mật khẩu thành công",
+    "DELETE_SUCCESS": "Xoá người dùng thành công",
+    "CHANGE_PASSWORD_SUCCESS": "Thay đổi mật khẩu thành công",
+
+    "NOT_FOUND": "Tài khoản không tồn tại",
+    "PROJECT_NOT_AVAILABLE": "Không thể tìm thấy một vài dự án",
+    "PASSWORD_NOT_PROVIDED": "Vui lòng nhập mật khẩu để xác thực",
+    "CONFIRM_PASSWORD_NOT_MATCHED": "Mật khẩu xác thực không trùng khớp",
+    "INCORRECT_PASSWORD": "Tài khoản hoặc mật khẩu không chính xác",
+    "CONSTRAINTS_FAILED": "Có lỗi xảy ra. Một vài trường ràng buộc không hợp lệ",
+
+    "EMAIL_EXISTED": "Email đã tồn tại",
+    "ACTIVATE_EMAIL": "Vui lòng kích hoạt tài khoản của bạn thông qua đường link gửi tới email"
+  },
+  "PACKAGES": {
+    "GET_PACKAGE_LIST_SUCCESS": "Tìm thấy danh sách gói thành viên",
+    "GET_PACKAGE_SUCCESS": "Tìm thấy gói thành viên",
+    "ADD_SUCCESS": "Thêm gói thành viên thành công",
+    "UPDATE_SUCCESS": "Cập nhật gói thành viên thành công",
+    "DELETE_SUCCESS": "Xoá gói thành viên thành công",
+
+    "NOT_FOUND": "Package does not exist"
+  },
+  "SETTINGS": {
+    "GET_ITEMS": "Trả về danh sách tất cả các cài đặt thành công",
+    "ITEM_NOT_EXIST": "Mục cài đặt không tồn tại",
+    "GET_ITEM": "Trả về thông tin cài đặt theo ID thành công",
+    "ITEM_DELETED": "Thông tin cài đặt này đã bị xoá",
+    "GET_ITEM_FAILED": "Trả về thông tin cài đặt thất bại",
+    "ADD_ITEM": "Thêm cài đặt thành công",
+    "ADD_ITEM_FAILED": "Thêm cài đặt thất bại",
+    "UPDATE_SUCCESS": "Cập nhật thông tin cài đặt thành công",
+    "UPDATE_SUCCESS_FAILED": "Cập nhật thông tin cài đặt thất bại",
+    "DELETE_SUCCESS": "Xoá thông tin cài đặt thành công",
+    "DELETE_SUCCESS_FAILED": "Xoá thông tin cài đặt thất bại"
+  },
+  "FILE_UPLOAD": {
+    "INVALID_MEDIA_FILE_TYPE": "Chỉ cho phép các tệp hình ảnh hoặc video",
+    "INVALID_CSV_FILE_TYPE": "Chỉ cho phép tệp csv",
+    "FILE_TOO_LARGE": "Tệp quá lớn",
+    "TOO_MANY_FILES": "Quá nhiều tệp",
+    "UPLOAD_SUCCESS": "Tải lên tệp thành công",
+    "UPLOAD_FAILED": "Tải lên tệp thất bại",
+    "FILE_NOT_EXIST": "Tệp không tồn tại",
+    "DELETE_FILE_SUCCESS": "Xóa tệp thành công",
+    "DELETE_FILE_FAILED": "Xóa tệp thất bại",
+    "INVERTER_SERIAL_NUMBER_NOT_EXIST": "Số sê-ri biến tần không tồn tại",
+    "PANEL_SERIAL_NUMBER_ALREADY_EXIST": "Số sê-ri của bảng đã tồn tại",
+    "PANEL_TYPE_NOT_EXIST": "Mẫu loại bảng không tồn tại",
+    "DELETE_FILE_ERROR": "Lỗi khi xóa tệp"
+  }
+}

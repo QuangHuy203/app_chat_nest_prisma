@@ -1,0 +1,62 @@
+{
+  "AREA": {
+    "GET_LIST_SUCCESS": "Get areas successfully",
+    "GET_SUCCESS": "Get area successfully",
+    "ADD_SUCCESS": "Add area successfully",
+    "UPDATE_SUCCESS": "Update area successfully",
+    "DELETE_SUCCESS": "Delete area successfully",
+    "DELETED": "Area deleted",
+    "NOT_FOUND": "Area does not exist"
+  },
+  "BUSINESS_MODEL": {
+    "GET_LIST_SUCCESS": "Get business model list successfully",
+    "GET_SUCCESS": "Get business model successfully",
+    "ADD_SUCCESS": "Add business model successfully",
+    "UPDATE_SUCCESS": "Update business model successfully",
+    "DELETE_SUCCESS": "Delete business model successfully",
+    "DELETED": "Business model deleted",
+    "NOT_FOUND": "Business model does not exist"
+  },
+  "CONTACT": {
+    "GET_LIST_SUCCESS": "Get contacts successfully",
+    "GET_SUCCESS": "Get contact successfully",
+    "ADD_SUCCESS": "Add contact successfully",
+    "UPDATE_SUCCESS": "Update contact successfully",
+    "DELETE_SUCCESS": "Delete contact successfully",
+    "NOT_FOUND": "Contact does not exist"
+  },
+  "MONITOR": {
+    "GET_LIST_SUCCESS": "Get monitors successfully",
+    "GET_SUCCESS": "Get monitor successfully",
+    "ADD_SUCCESS": "Add monitor successfully",
+    "UPDATE_SUCCESS": "Update monitor successfully",
+    "DELETE_SUCCESS": "Delete monitor successfully",
+    "DELETED": "Monitor deleted",
+    "NOT_FOUND": "Monitor does not exist"
+  },
+  "PROJECT": {
+    "GET_LIST_SUCCESS": "Get projects successfully",
+    "GET_ALL_SUCCESS": "Get all customers from all project",
+    "GET_SUCCESS": "Get project successfully",
+    "ADD_SUCCESS": "Add project successfully",
+    "UPDATE_SUCCESS": "Update project successfully",
+    "DELETE_SUCCESS": "Delete project successfully",
+    "EXISTED": "Project is existed",
+    "LEAST_ONE_ERROR": "When create new project, least one user",
+    "DELETED": "Project is deleted",
+    "ID_MUST_NUMBER": "Project id must be number",
+    "NOT_FOUND": "Project does not exist"
+  },
+  "TRANSFORMER": {
+    "GET_LIST_SUCCESS": "Get transformers successfully",
+    "GET_SUCCESS": "Get transformer successfully",
+    "ADD_SUCCESS": "Add transformer successfully",
+    "UPDATE_SUCCESS": "Update transformer successfully",
+    "DELETE_SUCCESS": "Delete transformer successfully",
+    "NOT_EXISTED": "Transformer is not existed",
+    "EXISTED": "Transformer is existed",
+    "CAPACITY_MUST_NUMBER": "transformerCapacity is must number",
+    "MANUFACTURER_MUST_STRING": "transformerManufacturer is must string",
+    "NOT_FOUND": "Transformer does not exist"
+  }
+}

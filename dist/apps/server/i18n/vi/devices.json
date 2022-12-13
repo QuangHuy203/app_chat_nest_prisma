@@ -1,0 +1,75 @@
+{
+    "INVERTER_TYPES": {
+        "GET_LIST_SUCCESS": "Tìm thấy danh sách kiểu máy biến áp",
+        "GET_SUCCESS": "Tìm thấy kiểu máy biến áp",
+        "ADD_SUCCESS": "Thêm kiểu máy biến áp thành công",
+        "UPDATE_SUCCESS": "Cập nhật kiểu máy biến áp thành công",
+        "DELETE_SUCCESS": "Xoá kiểu máy biến áp thành công",
+        "DELETED": "Kiểu máy biến áp đã bị xoá",
+        "NOT_FOUND": "Không tìm thấy kiểu máy biến áp",
+        "USER_NOT_FOUND": "Người dùng không tồn tại",
+        "INVALID_USER": "Thông tin xác thực không chính xác"
+    },
+    "INVERTERS": {
+        "GET_LIST_SUCCESS": "Tìm thấy danh sách máy biến áp",
+        "GET_SUCCESS": "Tìm thấy máy biến áp",
+        "ADD_SUCCESS": "Thêm máy biến áp thành công",
+        "UPDATE_SUCCESS": "Cập nhật máy biến áp thành công",
+        "DELETE_SUCCESS": "Xoá máy biến áp thành công",
+        "DELETED": "Máy biến áp đã bị xoá",
+        "NOT_FOUND": "Không tìm thấy máy biến áp",
+        "USER_NOT_FOUND": "Người dùng không tồn tại",
+        "INVALID_USER": "Thông tin xác thực không chính xác"
+    },
+    "METER_TYPES": {
+        "GET_LIST_SUCCESS": "Tìm thấy danh sách kiểu đồng hồ đo",
+        "GET_SUCCESS": "Tìm thấy kiểu đồng hồ đo",
+        "ADD_SUCCESS": "Thêm kiểu đồng hồ đo thành công",
+        "UPDATE_SUCCESS": "Cập nhật kiểu đồng hồ đo thành công",
+        "DELETE_SUCCESS": "Xoá kiểu đồng hồ đo thành công",
+        "DELETED": "Kiểu đồng hồ đo đã bị xoá",
+        "NOT_FOUND": "Không tìm thấy kiểu đồng hồ đo",
+        "USER_NOT_FOUND": "Người dùng không tồn tại",
+        "INVALID_USER": "Thông tin xác thực không chính xác"
+    },
+    "METERS": {
+        "GET_LIST_SUCCESS": "Tìm thấy danh sách đồng hồ đo",
+        "GET_SUCCESS": "Tìm thấy đồng hồ đo",
+        "ADD_SUCCESS": "Thêm đồng hồ đo thành công",
+        "UPDATE_SUCCESS": "Cập nhật đồng hồ đo thành công",
+        "DELETE_SUCCESS": "Xoá đồng hồ đo thành công",
+        "DELETED": "Đồng hồ đo đã bị xoá",
+        "NOT_FOUND": "Không tìm thấy đồng hồ đo"
+    },
+    "PANEL_TYPES": {
+        "GET_LIST_SUCCESS": "Tìm thấy danh sách kiểu bảng điều khiển",
+        "GET_SUCCESS": "Tìm thấy kiểu bảng điều khiển",
+        "ADD_SUCCESS": "Thêm kiểu bảng điều khiển thành công",
+        "UPDATE_SUCCESS": "Cập nhật kiểu bảng điều khiển thành công",
+        "DELETE_SUCCESS": "Xoá kiểu bảng điều khiển thành công",
+        "DELETED": "Kiểu bảng điều khiểnđã bị xoá",
+        "NOT_FOUND": "Không tìm thấy kiểu bảng điều khiển",
+        "USER_NOT_FOUND": "Người dùng không tồn tại",
+        "INVALID_USER": "Thông tin xác thực không chính xác"
+    },
+    "PANELS": {
+        "GET_LIST_SUCCESS": "Tìm thấy danh sách bảng điều khiển",
+        "GET_SUCCESS": "Tìm thấy bảng điều khiển",
+        "ADD_SUCCESS": "Thêm bảng điều khiển thành công",
+        "UPDATE_SUCCESS": "Cập nhật bảng điều khiển thành công",
+        "DELETE_SUCCESS": "Xoá bảng điều khiển thành công",
+        "DELETED": "Bảng điều khiển đã bị xoá",
+        "NOT_FOUND": "Không tìm thấy bảng điều khiển",
+        "USER_NOT_FOUND": "Người dùng không tồn tại",
+        "INVALID_USER": "Thông tin xác thực không chính xác"
+    },
+    "SENSORS": {
+        "GET_LIST_SUCCESS": "Tìm thấy danh sách cảm biến",
+        "GET_SUCCESS": "Tìm thấy cảm biến",
+        "ADD_SUCCESS": "Thêm cảm biến thành công",
+        "UPDATE_SUCCESS": "Cập nhật cảm biến thành công",
+        "DELETE_SUCCESS": "Xoá cảm biến thành công",
+        "DELETED": "Cảm biến đã bị xoá",
+        "NOT_FOUND": "Không tìm thấy cảm biến"
+    }
+}

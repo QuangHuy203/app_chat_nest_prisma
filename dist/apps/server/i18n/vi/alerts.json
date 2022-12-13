@@ -1,0 +1,18 @@
+{
+  "ALERT_ITEMS": {
+    "GET_ITEMS": "Tìm thấy danh sách cảnh báo",
+    "ITEM_NOT_EXIST": "Cánh báo không tồn tại",
+    "GET_ITEM": "Tìm thấy cảnh báo",
+    "ADD_ITEM": "Thêm cảnh báo thành công",
+    "UPDATE_SUCCESS": "Cập nhật cảnh báo thành công",
+    "DELETE_SUCCESS": "Xoá cảnh báo thành công"
+  },
+  "ALERT_PROJECTS": {
+    "GET_ITEMS_SUCCESS": "Tìm thấy danh sách cảnh báo",
+    "ALERT_NOT_EXIST": "Cảnh báo không tồn tại",
+    "GET_SUCCESS": "Tìm thấy cảnh báo",
+    "ADD_SUCCESS": "Thêm cảnh báo thành công",
+    "UPDATE_SUCCESS": "Cập nhật cảnh báo thành công",
+    "DELETE_SUCCESS": "Xoá cảnh báo thành công"
+  }
+}

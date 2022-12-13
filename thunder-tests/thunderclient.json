@@ -1,0 +1,575 @@
+[
+  {
+    "_id": "1d978334-4e1a-41d1-8766-d0850f86e50c",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "dcf3cacf-ba47-495d-b748-4cca5b936bb7",
+    "name": "Get bookmarks",
+    "url": "{{host}}/bookmarks",
+    "method": "GET",
+    "sortNum": 3750,
+    "created": "2022-10-05T07:55:55.579Z",
+    "modified": "2022-10-27T09:56:00.818Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "8f1a1bed-e17e-458f-bd93-2ddb208ffc2b",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "dcf3cacf-ba47-495d-b748-4cca5b936bb7",
+    "name": "Get bookmark by Id",
+    "url": "{{host}}/bookmarks/6351a19a98ab044869d4f401",
+    "method": "GET",
+    "sortNum": 7500,
+    "created": "2022-10-05T07:55:55.580Z",
+    "modified": "2022-10-20T19:29:36.610Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "bf872a74-0915-4e06-9928-7bb76a769d22",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "dcf3cacf-ba47-495d-b748-4cca5b936bb7",
+    "name": "Create bookmark",
+    "url": "{{host}}/bookmarks",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-10-05T07:55:55.581Z",
+    "modified": "2022-10-05T07:55:55.581Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"New bookmark\",\n  \"link\": \"url\",\n  \"description\": \"description\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "6a8f2445-cac3-4ff9-a36c-87b2c2f33c40",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "dcf3cacf-ba47-495d-b748-4cca5b936bb7",
+    "name": "Update bookmark",
+    "url": "{{host}}/bookmarks/6351a19a98ab044869d4f401",
+    "method": "PATCH",
+    "sortNum": 20000,
+    "created": "2022-10-05T07:55:55.583Z",
+    "modified": "2022-10-20T19:30:24.224Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"Thức khuya dậy sớm\",\n  \"link\": \"url\",\n  \"description\": \"description\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "fc6e4d19-24b0-4cd1-b899-5af3fc417788",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "2930c974-edea-4a64-8d6c-d96e39b896cb",
+    "name": "Get authentication",
+    "url": "{{host}}/auth/authentication",
+    "method": "GET",
+    "sortNum": 50000,
+    "created": "2022-10-05T07:55:55.585Z",
+    "modified": "2022-10-20T06:37:17.002Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "4b63550c-61e3-4e61-b24f-f3254538cbb5",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "dcf3cacf-ba47-495d-b748-4cca5b936bb7",
+    "name": "Delete bookmark",
+    "url": "{{host}}/bookmarks/6358fa2190191ec0f3ef897d",
+    "method": "DELETE",
+    "sortNum": 50000,
+    "created": "2022-10-05T07:55:55.586Z",
+    "modified": "2022-10-26T09:19:54.880Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "29493965-552b-4377-b6c0-ca23ddfa6ca9",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "5b648bb6-523e-42ab-b8b8-3f11e3f482a0",
+    "name": "Get users",
+    "url": "{{host}}/users",
+    "method": "GET",
+    "sortNum": 35000,
+    "created": "2022-10-17T19:16:25.988Z",
+    "modified": "2022-10-20T04:32:17.242Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "0d3ea5aa-d430-406f-8660-8e9ddcf228ac",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "5b648bb6-523e-42ab-b8b8-3f11e3f482a0",
+    "name": "Update user",
+    "url": "{{host}}/users/1",
+    "method": "PATCH",
+    "sortNum": 50000,
+    "created": "2022-10-19T13:00:08.741Z",
+    "modified": "2022-10-20T08:32:35.366Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"nexlesoft@gmail.com\",\n  \"firstName\": \"Nguyễn\",\n  \"lastName\": \"Thành Công 123123123\",\n  \"hash\": \"456\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "39647942-56f3-470e-a4bf-44bf88db3091",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "4ac186bf-9b74-4e1f-b106-04f2644d4bc4",
+    "name": "Get books",
+    "url": "{{host}}/books",
+    "method": "GET",
+    "sortNum": 5000,
+    "created": "2022-10-19T17:36:30.138Z",
+    "modified": "2022-10-19T17:45:44.071Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "62547ca6-c00f-475d-83f5-05223c276e9c",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "4ac186bf-9b74-4e1f-b106-04f2644d4bc4",
+    "name": "Get book by Id",
+    "url": "{{host}}/books/2",
+    "method": "GET",
+    "sortNum": 7500,
+    "created": "2022-10-19T17:36:30.139Z",
+    "modified": "2022-10-20T10:07:13.144Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "eeb017b2-60a9-4ef4-a719-ef8dcbb2f2e2",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "4ac186bf-9b74-4e1f-b106-04f2644d4bc4",
+    "name": "Create book",
+    "url": "{{host}}/books",
+    "method": "POST",
+    "sortNum": 10000,
+    "created": "2022-10-19T17:36:30.140Z",
+    "modified": "2022-10-27T13:25:59.111Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"PMI BOOK\",\n  \"description\": \"Quản lý dự án version 6\",\n  \"price\": 62000\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "bf58f191-ddf7-4be7-a3e1-21345376d7ad",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "4ac186bf-9b74-4e1f-b106-04f2644d4bc4",
+    "name": "Update book",
+    "url": "{{host}}/books/1",
+    "method": "PATCH",
+    "sortNum": 20000,
+    "created": "2022-10-19T17:36:30.141Z",
+    "modified": "2022-10-20T10:03:02.972Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"title\": \"PMI BOOK\",\n  \"description\": \"Quản lý dự án version 7\",\n  \"price\": 450000\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "2ed5a2bf-5aeb-495e-b908-d6b04025a84f",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "4ac186bf-9b74-4e1f-b106-04f2644d4bc4",
+    "name": "Delete book",
+    "url": "{{host}}/books/2",
+    "method": "DELETE",
+    "sortNum": 50000,
+    "created": "2022-10-19T17:36:30.142Z",
+    "modified": "2022-10-20T10:03:23.754Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "7827f207-05a7-4b5b-971a-1a6dc21917ec",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "5b648bb6-523e-42ab-b8b8-3f11e3f482a0",
+    "name": "Get user by id",
+    "url": "{{host}}/users/1",
+    "method": "GET",
+    "sortNum": 45000,
+    "created": "2022-10-20T04:46:17.066Z",
+    "modified": "2022-10-28T02:18:03.988Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "e115f349-970d-4220-88af-82a8bd8c7693",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "5b648bb6-523e-42ab-b8b8-3f11e3f482a0",
+    "name": "Delete user",
+    "url": "{{host}}/users/6",
+    "method": "DELETE",
+    "sortNum": 60000,
+    "created": "2022-10-20T04:46:46.466Z",
+    "modified": "2022-10-20T08:34:56.616Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "2c3260c2-1601-42e0-961a-1b1170b1894f",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "2930c974-edea-4a64-8d6c-d96e39b896cb",
+    "name": "signup",
+    "url": "{{host}}/auth/signup",
+    "method": "POST",
+    "sortNum": 20000,
+    "created": "2022-10-20T04:49:17.424Z",
+    "modified": "2022-11-03T05:57:20.182Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"localhost@gmail.com\",\n  \"firstName\": \"Nguyễn\",\n  \"lastName\": \"Văn A\",\n  \"password\": \"123\"\n}",
+      "form": []
+    },
+    "tests": []
+  },
+  {
+    "_id": "a8baf882-285b-4c26-8881-24f28e8dd77d",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "2930c974-edea-4a64-8d6c-d96e39b896cb",
+    "name": "signin",
+    "url": "{{host}}/auth/signin",
+    "method": "POST",
+    "sortNum": 30000,
+    "created": "2022-10-20T04:49:17.425Z",
+    "modified": "2022-11-03T07:15:15.882Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"localhost@gmail.com\",\n  \"password\": \"123\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data.accessToken",
+        "action": "setto",
+        "value": "{{accessToken}}"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.data.refreshToken",
+        "action": "setto",
+        "value": "{{refreshToken}}"
+      }
+    ]
+  },
+  {
+    "_id": "5a8c80f0-bbb1-4169-86bb-f88ead25fd4d",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "2930c974-edea-4a64-8d6c-d96e39b896cb",
+    "name": "signout",
+    "url": "{{host}}/auth/signin",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-10-20T04:50:01.175Z",
+    "modified": "2022-10-20T04:50:01.175Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"develop@gmail.com\",\n  \"password\": \"123\"\n}",
+      "form": []
+    },
+    "tests": [
+      {
+        "type": "set-env-var",
+        "custom": "json.data.access_token",
+        "action": "setto",
+        "value": "{{accessToken}}"
+      },
+      {
+        "type": "set-env-var",
+        "custom": "json.data.refresh_token",
+        "action": "setto",
+        "value": "{{refreshToken}}"
+      }
+    ]
+  },
+  {
+    "_id": "1ac633cb-f73b-476e-8eb9-e5552659e632",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "a5f2b564-20ce-48c4-9a02-b599105f219b",
+    "name": "Get activity logs",
+    "url": "{{host}}/activity",
+    "method": "GET",
+    "sortNum": 70000,
+    "created": "2022-10-27T09:55:52.989Z",
+    "modified": "2022-10-27T09:56:47.429Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "d76a698f-2430-4c33-abac-5a306a6c358f",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "a5f2b564-20ce-48c4-9a02-b599105f219b",
+    "name": "Create activity",
+    "url": "{{host}}/activity",
+    "method": "POST",
+    "sortNum": 80000,
+    "created": "2022-10-27T10:39:46.304Z",
+    "modified": "2022-10-28T06:17:18.639Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"status\": \"SUCCESSFUL\",\n  \"description\": \"aadad adqwasda fdgsvrtwre asdvxc\"\n}",
+      "form": []
+    }
+  },
+  {
+    "_id": "037ae57b-2091-4ec4-bf99-599e95f57a8e",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "a5f2b564-20ce-48c4-9a02-b599105f219b",
+    "name": "Get activity by id",
+    "url": "{{host}}/activity/10",
+    "method": "GET",
+    "sortNum": 75000,
+    "created": "2022-10-28T02:10:04.926Z",
+    "modified": "2022-10-29T18:11:20.177Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "e73177a4-2de4-4f93-87f4-984718dd0a6a",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "a5f2b564-20ce-48c4-9a02-b599105f219b",
+    "name": "Delete activity",
+    "url": "{{host}}/activity/17",
+    "method": "DELETE",
+    "sortNum": 100000,
+    "created": "2022-10-28T02:25:10.945Z",
+    "modified": "2022-10-29T18:11:30.649Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "6b358bbb-9c65-487e-8701-90f9dde5ffa0",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "a5f2b564-20ce-48c4-9a02-b599105f219b",
+    "name": "Update activity by id",
+    "url": "{{host}}/activity/14",
+    "method": "PATCH",
+    "sortNum": 110000,
+    "created": "2022-10-28T02:53:20.308Z",
+    "modified": "2022-10-29T18:11:41.356Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"status\": \"UNSUCCESSFUL\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "5c147849-0e0e-40ef-b9e4-971cfb102a59",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "d36c5df2-c703-4c18-8f54-14745264cc1a",
+    "name": "Get customers",
+    "url": "{{host}}/customers",
+    "method": "GET",
+    "sortNum": 35000,
+    "created": "2022-10-28T10:30:01.083Z",
+    "modified": "2022-10-28T10:39:18.813Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "8c088a1e-f238-43dd-b894-b40954d6029f",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "d36c5df2-c703-4c18-8f54-14745264cc1a",
+    "name": "Get customer by id",
+    "url": "{{host}}/customers/1",
+    "method": "GET",
+    "sortNum": 45000,
+    "created": "2022-10-28T10:30:01.084Z",
+    "modified": "2022-10-29T02:56:37.958Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "964b7454-2f93-4698-9384-dab55639821b",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "d36c5df2-c703-4c18-8f54-14745264cc1a",
+    "name": "Update customer",
+    "url": "{{host}}/customers/1",
+    "method": "PATCH",
+    "sortNum": 50000,
+    "created": "2022-10-28T10:30:01.085Z",
+    "modified": "2022-10-29T03:00:21.539Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"nexlesoft@gmail.com\",\n  \"fullName\": \"Công Ty TNHH Một Mình Tau\",\n  \"address\": \"123 Bình Thường 11111\",\n  \"code\": \"VN456\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "53d75737-f8fb-40b5-8ca3-16f6e4864062",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "d36c5df2-c703-4c18-8f54-14745264cc1a",
+    "name": "Delete customer",
+    "url": "{{host}}/customers/1",
+    "method": "DELETE",
+    "sortNum": 60000,
+    "created": "2022-10-28T10:30:01.086Z",
+    "modified": "2022-10-28T10:44:42.910Z",
+    "headers": [],
+    "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  },
+  {
+    "_id": "6cc73d4c-2d09-4809-90cf-60674c5010e1",
+    "colId": "18150ee5-4db2-4323-94f3-47b392cbe20e",
+    "containerId": "d36c5df2-c703-4c18-8f54-14745264cc1a",
+    "name": "Add customer",
+    "url": "{{host}}/customers",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2022-10-28T10:35:19.125Z",
+    "modified": "2022-11-01T04:23:59.115Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"email\": \"nexlesoft@gmail.com\",\n  \"fullName\": \"Công Ty TNHH Một Mình Tau\",\n  \"address\": \"123 Bình Thường\",\n  \"code\": \"VN456\"\n}",
+      "form": []
+    },
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{accessToken}}"
+    },
+    "tests": []
+  }
+]

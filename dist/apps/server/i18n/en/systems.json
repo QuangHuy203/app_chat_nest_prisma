@@ -1,0 +1,65 @@
+{
+  "AUTH": {
+    "SIGN_OUT_SUCCESS": "Sign out successfully",
+    "GET_SUCCESS_TOKEN_SUCCESS": "Get refresh token successfully",
+    "RESET_PASSWORD_LINK_SENT": "A link for resetting password has been sent to your email",
+
+    "REFRESH_TOKEN_EXPIRED": "Refresh token expired or does not exist"
+  },
+  "USER": {
+    "SIGN_UP_SUCCESS": "Sign up successfully. Please activate your account via a link sent to your email",
+    "GET_USER_LIST_SUCCESS": "Get list of users successfully",
+    "GET_USER_SUCCESS": "Get user successfully",
+    "UPDATE_SUCCESS": "Update user successfully",
+    "UPDATE_PASSWORD_SUCCESS": "Update password successfully",
+    "DELETE_SUCCESS": "Delete user successfully",
+    "CHANGE_PASSWORD_SUCCESS": "Change password successfully",
+
+    "NOT_FOUND": "Account does not exist",
+    "PROJECT_NOT_AVAILABLE": "Some projects are not available",
+    "PASSWORD_NOT_PROVIDED": "Please provide your password for confirmation",
+    "CONFIRM_PASSWORD_NOT_MATCHED": "Confirm password does not match",
+    "INCORRECT_PASSWORD": "Invalid username or password",
+    "CONSTRAINTS_FAILED": "Some errors occur. Please check the constraints again",
+
+    "EMAIL_EXISTED": "Email is already existed",
+    "ACTIVATE_EMAIL": "Please activate your account via the link sent to your email"
+  },
+  "PACKAGES": {
+    "GET_PACKAGE_LIST_SUCCESS": "Get packages successfully",
+    "GET_PACKAGE_SUCCESS": "Get package successfully",
+    "ADD_SUCCESS": "Add package successfully",
+    "UPDATE_SUCCESS": "Update package successfully",
+    "DELETE_SUCCESS": "Delete package successfully",
+
+    "NOT_FOUND": "Package does not exist"
+  },
+  "SETTINGS": {
+    "GET_ITEMS": "Get all settings items successfully",
+    "ITEM_NOT_EXIST": "The setting item does not exist",
+    "GET_ITEM": "Get setting item by id successfully",
+    "ITEM_DELETED": "This setting information has been deleted",
+    "GET_ITEM_FAILED": "Get setting item unsuccessfully",
+    "ADD_ITEM": "Add setting item successfully",
+    "ADD_ITEM_FAILED": "Add setting item unsuccessfully",
+    "UPDATE_SUCCESS": "Update setting successfully",
+    "UPDATE_SUCCESS_FAILED": "Update setting unsuccessfully",
+    "DELETE_SUCCESS": "Delete setting successfully",
+    "DELETE_SUCCESS_FAILED": "Delete setting unsuccessfully"
+  },
+  "FILE_UPLOAD": {
+    "INVALID_MEDIA_FILE_TYPE": "Only image or video files are allowed",
+    "INVALID_CSV_FILE_TYPE": "Only csv file is allowed",
+    "FILE_TOO_LARGE": "File too large",
+    "TOO_MANY_FILES": "Too many files",
+    "UPLOAD_SUCCESS": "File uploaded successfully",
+    "UPLOAD_FAILED": "File uploaded unsuccessfully",
+    "FILE_NOT_EXIST": "The file does not existed",
+    "DELETE_FILE_SUCCESS": "File deleted successfully",
+    "DELETE_FILE_FAILED": "File deleted unsuccessfully",
+    "INVERTER_SERIAL_NUMBER_NOT_EXIST": "The inverter serial number does not existed",
+    "PANEL_SERIAL_NUMBER_ALREADY_EXIST": "The panel serial number already exists",
+    "PANEL_TYPE_NOT_EXIST": "The panel type model does not existed",
+    "DELETE_FILE_ERROR": "Error when deleting the file"
+  }
+}

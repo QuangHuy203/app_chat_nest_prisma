@@ -1,0 +1,165 @@
+version: '3.3'
+services:
+  mysql_server:
+    image: mysql:latest
+    container_name: ${MYSQL_SERVER_CONTAINER}
+    restart: always
+    command:
+      --max_connections=10000
+      --sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+    ports:
+      - ${MYSQL_SERVER_PORT}:3306
+    expose:
+      - ${MYSQL_SERVER_PORT}
+    networks:
+      - power-hub-network
+    volumes: 
+      - ./docker/mysql_server:/var/lib/mysql
+    environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_ROOT_HOST: ${MYSQL_ROOT_HOST}
+      MYSQL_ROOT_USER: ${MYSQL_ROOT_USER}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+
+  mysql_dev:
+    image: mysql:latest
+    container_name: ${MYSQL_DEV_CONTAINER}
+    restart: always
+    command:
+      --max_connections=10000
+      --sql_mode=STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+    ports:
+      - ${MYSQL_DEV_PORT}:3306
+    expose:
+      - ${MYSQL_DEV_PORT}
+    networks:
+      - power-hub-network
+    volumes: 
+      - ./docker/mysql_dev:/var/lib/mysql
+    environment:
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_ROOT_HOST: ${MYSQL_ROOT_HOST}
+      MYSQL_ROOT_USER: ${MYSQL_ROOT_USER}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+  
+  redis_dev:
+    image: redis
+    container_name: ${REDIS_DEV_CONTAINER}
+    restart: always
+    ports:
+      - 50005:6379
+    expose:
+      - 50005
+    command: redis-server --save 20 1 --loglevel warning --requirepass ${PASSWORD_REDIS}
+    volumes: 
+      - ./docker/redis_dev:/data
+    networks:
+      - power-hub-network
+
+  redis_server:
+    image: redis
+    container_name: ${REDIS_SERVER_CONTAINER}
+    restart: always
+    ports:
+      - 50006:6379
+    expose:
+      - 50006
+    command: redis-server --save 20 1 --loglevel warning --requirepass ${PASSWORD_REDIS}
+    volumes: 
+      - ./docker/redis_server:/data
+    networks:
+      - power-hub-network
+
+  mongodb_migrate:
+    image: mongo:4.4.6
+    container_name: mongodb_migrate_container
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_INITDB_DATABASE: ${MONGO_DATABASE}
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./docker/mongodb_migrate:/data/db
+    networks:
+       - power-hub-network
+
+  mongodb_migrate_seed:
+    container_name: mongodb_migrate_seed_container
+    build: ./mongodb_migrate_seed
+    depends_on:
+      - mongodb_migrate
+
+  # Replica Set (required for Prisma Client)
+  mongo:
+    container_name: ${HOST_MONGO_CONTAINER}
+    build: ./mongodb_replica
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${MONGO_INITDB_ROOT_USERNAME}
+      MONGO_INITDB_ROOT_PASSWORD: ${MONGO_INITDB_ROOT_PASSWORD}
+      MONGO_REPLICA_HOST: ${MONGO_REPLICA_HOST}
+      MONGO_REPLICA_PORT: ${MONGO_REPLICA_PORT}
+    ports:
+      - '${MONGO_REPLICA_PORT}:${MONGO_REPLICA_PORT}'
+    volumes:
+      - ./docker/mongo:/data/db
+    networks:
+      - power-hub-network
+  
+  
+  
+  # Services
+  server:
+    container_name: api_gateway
+    build:
+      context: .
+      dockerfile: ./apps/server/Dockerfile
+      target: development
+    command: yarn run start server
+    environment:
+      MYSQL_DATABASE_URL: ${MYSQL_DATABASE_URL}
+      MONGODB_DATABASE_URL: ${MONGODB_DATABASE_URL}
+      HOST_REDIS_SERVER: ${HOST_REDIS_SERVER}
+    depends_on:
+      - redis_dev
+      - mysql_dev
+      - mysql_server
+      - mongo
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    ports:
+      - ${PORT}:${PORT}
+    expose:
+      - ${PORT}
+    networks:
+      - power-hub-network
+
+  chat:
+    container_name: chat_service
+    build:
+      context: .
+      dockerfile: ./apps/chat/Dockerfile
+      target: development
+    command: yarn run start chat
+    depends_on:
+      - redis_dev
+      - mysql_dev
+      - mysql_server
+      - mongo
+      - server
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    networks:
+      - power-hub-network
+
+# Docker Networks
+networks:
+  power-hub-network:
+    driver: bridge

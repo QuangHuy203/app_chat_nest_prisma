@@ -1,0 +1,7 @@
+{
+  "UNAUTHORIZED": "Không được quyền truy cập",
+  "VERIFIED": "Xác thực thành công",
+  "INCORRECT_CREDENTIALS": "Tài khoản hoặc mật khẩu không chính xác",
+  "INTERNAL_SERVER_ERROR": "Lỗi hệ thống",
+  "CONSTRAINTS_NOT_FOUND": "Một vài trường không tồn tại"
+}

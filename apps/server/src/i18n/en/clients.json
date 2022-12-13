@@ -1,0 +1,15 @@
+{
+    "CUSTOMERS": {
+        "GET_LIST_SUCCESS": "Get customers successfully",
+        "GET_SUCCESS": "Get customer successfully",
+        "ADD_SUCCESS": "Add customer successfully",
+        "UPDATE_SUCCESS": "Update customer successfully",
+        "DELETE_SUCCESS": "Delete customer successfully",
+        "DELETED": "Customer deleted",
+        "NOT_FOUND": "Customer does not exist",
+        "INVALID_PASSWORD": "Incorrect password",
+        "PASSWORD_ALERT": "Please provide your password for confirmation",
+        "INVALID_USER": "Some users are not available",
+        "EXISTED": "Customer already existed"
+    }
+  }
